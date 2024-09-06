@@ -8,6 +8,5 @@ __pycache__/
 *.pyz
 *.pyzw
 
-
 gitrun.py
 data/dados.json
