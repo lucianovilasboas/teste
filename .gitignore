@@ -10,3 +10,5 @@ __pycache__/
 
 gitrun.py
 data/dados.json
+
+logs.log
