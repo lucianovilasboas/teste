@@ -2,6 +2,7 @@ import schedule
 import subprocess
 import time
 from datetime import datetime
+from log import logger
 
 # Função para executar o script gitrun.py
 def executar():
@@ -13,11 +14,16 @@ def executar():
     
     # print(f"Executando gitrun.py com a mensagem: {mensagem_commit}") 
     
+    cmd = ["python", "gitrun.py", "-m", mensagem_commit] 
+
+    logger.info("Executando : %s", " ".join(cmd))
+
     # Executando o script gitrun.py com a mensagem de commit
-    subprocess.run(["python", "gitrun.py", "-m", mensagem_commit], shell=True)
+    subprocess.run(cmd, shell=True)
 
 if __name__ == "__main__":
     print("Agendador de tarefas iniciado...")
+    logger.info("Agendador de tarefas iniciado...")
     
     # Agendar as tarefas
     schedule.every().minute.do(executar)
