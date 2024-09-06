@@ -11,7 +11,7 @@ def executar():
     # Mensagem de commit com o horário de execução
     mensagem_commit = f"Commit via agenda em {horario_atual}"
     
-    print(f"Executando gitrun.py com a mensagem: {mensagem_commit}") 
+    # print(f"Executando gitrun.py com a mensagem: {mensagem_commit}") 
     
     # Executando o script gitrun.py com a mensagem de commit
     subprocess.run(["python", "gitrun.py", "-m", mensagem_commit], shell=True)
